@@ -10,6 +10,7 @@ import { Button } from './ui/button';
 import ImageUpload from './ImageUpload';
 import { createPost } from '@/actions/post.action';
 import toast from 'react-hot-toast';
+import { set } from 'date-fns';
 
 
 
@@ -65,7 +66,19 @@ function CreatePost() {
                             disabled={isPosting}
                         />
                     </div>
-                    {/*handle image uploading  */}
+                    {(showImageUpload || imageUrl) && (
+                      <div className="border rounded-lg p-4">
+                        <ImageUpload
+                          endpoint="postImage"
+                          onChange={(url)=> {setImageUrl(url)
+                            if (!url) setShowImageUpload(false) }
+                          }
+                          value={imageUrl} />
+
+                      </div>
+
+                      
+                    )}
             
 
           <div className="flex items-center justify-between border-t pt-4">

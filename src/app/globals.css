@@ -1,3 +1,16 @@
+/* src/app/globals.css */
+
+@import "tailwindcss";
+@import "uploadthing/tw/v4";
+@source "../node_modules/@uploadthing/react/dist";
+
+
+
+/* Tu peux aussi avoir d'autres styles globaux ici. */
+
+
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
