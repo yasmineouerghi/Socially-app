@@ -166,7 +166,7 @@ export async function getUserLikedPosts(userId: string) {
         },
       });
   
-      revalidatePath("/profile");
+      revalidatePath("/profile"); //To update immediatly
       return { success: true, user };
     } catch (error) {
       console.error("Error updating profile:", error);
