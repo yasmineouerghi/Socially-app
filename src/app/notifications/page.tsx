@@ -56,7 +56,7 @@ function NotificationsPage() {
  
   return (
       <div className="space-y-4">
-        <Card>
+        <Card className="pl-6 space-y-2 h-auto">
           <CardHeader className="border-b">
             <div className="flex items-center justify-between">
               <CardTitle>Notifications</CardTitle>
@@ -66,7 +66,7 @@ function NotificationsPage() {
             </div>
           </CardHeader>
           <CardContent className="p-0">
-            <ScrollArea className="h-[calc(100vh-12rem)]">
+            <ScrollArea className="h-[calc(100vh-2rem)]">
               {notifications.length === 0 ? (
                 <div className="p-4 text-center text-muted-foreground">No notifications yet</div>
               ) : (
@@ -80,7 +80,7 @@ function NotificationsPage() {
                     <Avatar className="mt-1">
                       <AvatarImage src={notification.creator.image ?? "/avatar.png"} />
                     </Avatar>
-                    <div className="flex-1 space-y-1">
+                    <div className="flex-1  space-y-1">
                       <div className="flex items-center gap-2">
                         {getNotificationIcon(notification.type)}
                         <span>
@@ -104,7 +104,7 @@ function NotificationsPage() {
                                 <img
                                   src={notification.post.image}
                                   alt="Post content"
-                                  className="mt-2 rounded-md w-full max-w-[200px] h-auto object-cover"
+                                  className="mt-2 rounded-md w-full max-w-[300px] overflow-hidden h-auto object-cover"
                                 />
                               )}
                             </div>
